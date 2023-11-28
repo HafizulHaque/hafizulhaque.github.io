@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const navItems = [
     { label: 'Home', path: '/'},
-    { label: 'GuestBook', path: '/guestBook'},
+    { label: 'GuestBook', path: '/guestbook'},
     { label: 'Projects', path: '/projects'},
   ]
 
@@ -35,7 +35,7 @@ const Navbar = () => {
                       key={index}
                       href={item.path} 
                       prefetch 
-                      className={pathname === item.path ? 'border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium' : 'border-transparent text-gray-500 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}>
+                      className={pathname === item.path ? 'border-teal-500 dark:text-white h-full inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium' : 'border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}>
                       { item.label }
                     </Link>
                   ))}
