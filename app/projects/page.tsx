@@ -53,10 +53,16 @@ export default async function ProjectsPage() {
               <p className="line-clamp-3 mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                 {project.overview}
               </p>
-              <a href={project.repo} target='_blank' className='group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500'>
-                View Source Code
-                <span className='block transition-all group-hover:ms-0.5'>&rarr;</span>
-              </a>
+              <div className="flex justify-between items-center">
+                <a href={project.repo} target='_blank' className='group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500'>
+                  View Source Code
+                  <span className='block transition-all group-hover:ms-0.5'>&rarr;</span>
+                </a>
+                <a href={project.link} target='_blank' className='group mt-4 inline-flex items-center gap-1 text-sm font-medium text-teal-500'>
+                  Live Preview
+                  <span className='block transition-all group-hover:ms-0.5'>&rarr;</span>
+                </a>
+              </div>
             </div>
           </article>
         ))}
