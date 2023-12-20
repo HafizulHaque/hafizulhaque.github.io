@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <Head>
-        <link rel="shortcut icon" href="./favicon.ico" />
+        <link rel="icon" type='image/x-icon' href="./favicon.ico"/>
       </Head>
       <body className={`${inter.className} bg-white text-black dark:bg-[#090908] dark:text-white h-full selection:bg-gray-100 dark:selection:bg-gray-800`}>
         <Provider>
