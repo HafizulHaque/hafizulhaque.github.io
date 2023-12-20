@@ -68,7 +68,7 @@ export default function Home() {
             I completed my B.Sc. in CSE from Chittagong University of Engineering & Technology (CUET) in 2021 and H.S.C. from Notre Dame College in 2015.
           </p>
           <p>
-            I have expertise in full-stack web development with a primary focus on frontend. Currently I am working on 'Robi Distribution Management System' project. Tech Stack I am skilled at, but not limited to, includes JavaScript, React, Next.js, Angular, Tailwind CSS, Node.js, Nest.js, Java, Kotlin, Spring Boot, and Docker.
+            I have expertise in full-stack web development with a primary focus on frontend. Currently I am working on &lsquo;Robi Distribution Management System&rsquo; project. Tech Stack I am skilled at, but not limited to, includes JavaScript, React, Next.js, Angular, Tailwind CSS, Node.js, Nest.js, Java, Kotlin, Spring Boot, and Docker.
           </p>
         </div>
       </div>
