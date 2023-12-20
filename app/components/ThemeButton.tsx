@@ -10,40 +10,46 @@ export default function ThemeButton() {
 
   useEffect(() => {
     setMounted(true)
+    setTheme('light')
   }, [])
 
   if(!mounted) return null
 
   return (
-    <button 
-      className='bg-teal-500/30 p-2 rounded-lg text-teal-500'
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
-      { resolvedTheme === 'dark' ? (
+    <label htmlFor='themeCheckbox' className='bg-gray-100 cursor-pointer relative w-12 h-6 rounded-full border border-teal-300'>
+      <input 
+        type="checkbox" 
+        id='themeCheckbox' 
+        className='sr-only peer' 
+        onChange={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}/>
+      <span 
+        className='w-3/7 h-full bg-teal-100 absolute border border-teal-300 rounded-full left-0 top-0 peer-checked:left-6 transition-all duration-500 ease-out'>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           fill="none" 
           viewBox="0 0 24 24" 
           strokeWidth="1.5" stroke="currentColor" 
-          className="w-6 h-6">
+          className="w-full h-full text-teal-500 p-[2px]">
           <path 
             strokeLinecap="round" 
             strokeLinejoin="round" 
-            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            d={resolvedTheme === 'light' ? "M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" : "M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"}/>
         </svg>
-      ) : (
+      </span>
+      <span 
+        className='w-3/7 h-full absolute rounded-full left-6 top-0 peer-checked:left-0 transition-all duration-500 ease-in-out'>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           fill="none" 
           viewBox="0 0 24 24" 
-          strokeWidth="1.5" 
-          stroke="currentColor" 
-          className="w-6 h-6">
+          strokeWidth="1.5" stroke="currentColor" 
+          className="w-full h-full text-teal-200 p-[2px]">
           <path 
             strokeLinecap="round" 
             strokeLinejoin="round" 
-            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+            d={resolvedTheme === 'dark' ? "M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" : "M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"}/>
         </svg>
-      )}
-    </button>
+      </span>
+    </label>
   )
 }
