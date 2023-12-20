@@ -9,6 +9,10 @@ on:
   push:
     branches: ["main"]
 
+env:
+  # setting global Env variables
+  DATABASE_URL: postgres://admin:QMzDHMKmwJL4ITYoQgf08k3nlSQCPekL@dpg-cli3kesig7qc73eptc60-a.singapore-postgres.render.com/portfolio_db_tva6
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
