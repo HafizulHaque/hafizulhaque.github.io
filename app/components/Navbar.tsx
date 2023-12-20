@@ -4,6 +4,7 @@ import { Disclosure } from "@headlessui/react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import ThemeButton from "./ThemeButton"
+// import Resume from '@/public/Hafizul-Haque-Reddot-CUET.pdf'
 
 const Navbar = () => {
 
@@ -39,6 +40,12 @@ const Navbar = () => {
                       { item.label }
                     </Link>
                   ))}
+                  <a 
+                    target="_blank"
+                    className="border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    href="./Hafizul-Haque-Reddot-CUET.pdf" 
+                    download="Hafizul_Haque_Reddot_CUET_Resume.pdf"
+                    rel="noreferrer">Download Resume</a>
                   <ThemeButton/>
                 </div>
               </div>
@@ -82,6 +89,12 @@ const Navbar = () => {
                   { item.label }
                 </Link>
               ))}
+                <a 
+                  target="_blank"
+                  className='border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-white block pl-3 pr-4 py-2 dark:hover:bg-gray-700 border-l-4 text-base font-medium dark:text-white'
+                  href="./Hafizul-Haque-Reddot-CUET.pdf" 
+                  download="Hafizul_Haque_Reddot_CUET_Resume.pdf"
+                  rel="noreferrer">Download Resume</a>
             </div>
           </Disclosure.Panel>
         </>
