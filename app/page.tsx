@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Me from '@/public/hafizul-haque.jpg'
+import Me from '@/public/user.jpg'
 
 export default function Home() {
   return (
