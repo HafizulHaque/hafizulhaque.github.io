@@ -62,7 +62,7 @@ export default function Home() {
         {/* right part  */}
         <div className="prose max-w-none prose-lg pt-8 pb-7 dark:prose-invert xl:col-span-2">
           <p>
-            I am a professional Software Engineer with 2+ years of experience. I am currently working at Reddot Digital IT, a subsidery of reknowned telco company Robi Axiata Ltd.
+            I am a professional Software Engineer with 3 years of experience. I am currently working at Reddot Digital IT, a subsidery of reknowned telco company Robi Axiata Ltd.
           </p>
           <p>
             I completed my B.Sc. in CSE from Chittagong University of Engineering & Technology (CUET) in 2021 and H.S.C. from Notre Dame College in 2015.
