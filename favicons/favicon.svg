@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="96" fill="#0f172a"/>
+  <!-- lambda -->
+  <text x="148" y="360" font-family="Georgia, 'Times New Roman', serif" font-size="300" font-weight="400" fill="#f59e0b">λ</text>
+  <!-- rank bars top-right, descending -->
+  <rect x="340" y="110" width="110" height="30" rx="6" fill="#f59e0b" opacity="0.95"/>
+  <rect x="340" y="156" width="80"  height="30" rx="6" fill="#f59e0b" opacity="0.65"/>
+  <rect x="340" y="202" width="54"  height="30" rx="6" fill="#f59e0b" opacity="0.40"/>
+  <rect x="340" y="248" width="34"  height="30" rx="6" fill="#f59e0b" opacity="0.22"/>
+</svg>
