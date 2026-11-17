@@ -20,6 +20,7 @@
     <link rel="preconnect" href="https://use.fontawesome.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -30,21 +31,23 @@
     <nav class="site-nav" role="banner" aria-label="Main navigation">
         <div class="nav-inner">
             <span class="nav-brand">&lt;Hafizul Haque /&gt;</span>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#main-content">Home</a></li>
                 <li><a href="#sec-about">About</a></li>
                 <li><a href="#sec-exp">Experience</a></li>
                 <li><a href="#sec-projects">Projects</a></li>
                 <li><a href="#sec-edu">Education</a></li>
                 <li><a href="./public/Hafizul_Haque_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
-                <li>
-                    <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </li>
             </ul>
+            <button class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
+    <div class="nav-scrim" id="nav-scrim" hidden></div>
 
     <!-- ── Main ── -->
     <main id="main-content" role="main">
@@ -62,17 +65,16 @@
                              alt="Portrait of Hafizul Haque">
                         <div class="profile-name">Hafizul Haque</div>
                         <div class="profile-role">Senior Frontend Engineer</div>
-                        <div class="profile-role">Dhaka, Bangladesh</div>
                         <div class="status-badge">
                             <span class="status-dot"></span>
                             Open · Project, Part-time &amp; Full-time
                         </div>
                         <div class="social-row">
+                            <a href="https://github.com/HafizulHaque" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
                             <a href="https://www.linkedin.com/in/hafizul-haque" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="mailto:hafizul.cse.cuet@gmail.com" class="social-icon" aria-label="Email">
-                                <i class="fas fa-envelope"></i>
                             </a>
                         </div>
                     </div>
@@ -96,41 +98,37 @@
                     <div class="info-card">
                         <div class="card-label">Skills</div>
                         <div class="skill-group">Frontend</div>
-                        <div class="tags-wrap">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Next.js</span>
-                            <span class="tag">Angular</span>
-                            <span class="tag">Vite</span>
-                            <span class="tag">Redux Toolkit</span>
-                            <span class="tag">Zustand</span>
-                            <span class="tag">TanStack Query</span>
-                            <span class="tag">Shadcn</span>
-                            <span class="tag">Storybook</span>
-                            <span class="tag">ESLint</span>
-                            <span class="tag">Prettier</span>
+                        <div class="skill-icons">
+                            <span class="skill-icon" title="HTML5" aria-label="HTML5" role="img"><i class="devicon-html5-plain colored"></i></span>
+                            <span class="skill-icon" title="CSS3" aria-label="CSS3" role="img"><i class="devicon-css3-plain colored"></i></span>
+                            <span class="skill-icon" title="JavaScript" aria-label="JavaScript" role="img"><i class="devicon-javascript-plain colored"></i></span>
+                            <span class="skill-icon" title="TypeScript" aria-label="TypeScript" role="img"><i class="devicon-typescript-plain colored"></i></span>
+                            <span class="skill-icon" title="React" aria-label="React" role="img"><i class="devicon-react-original colored"></i></span>
+                            <span class="skill-icon" title="Next.js" aria-label="Next.js" role="img"><i class="devicon-nextjs-plain colored"></i></span>
+                            <span class="skill-icon" title="Angular" aria-label="Angular" role="img"><i class="devicon-angularjs-plain colored"></i></span>
+                            <span class="skill-icon" title="Vite" aria-label="Vite" role="img"><i class="devicon-vitejs-plain colored"></i></span>
+                            <span class="skill-icon" title="Redux Toolkit" aria-label="Redux Toolkit" role="img"><i class="devicon-redux-original colored"></i></span>
+                            <span class="skill-icon" title="Zustand" aria-label="Zustand" role="img"><i class="devicon-zustand-plain colored"></i></span>
+                            <span class="skill-icon" title="Shadcn" aria-label="Shadcn" role="img"><i class="devicon-shadcn-original colored"></i></span>
+                            <span class="skill-icon" title="Storybook" aria-label="Storybook" role="img"><i class="devicon-storybook-plain colored"></i></span>
+                            <span class="skill-icon" title="ESLint" aria-label="ESLint" role="img"><i class="devicon-eslint-plain colored"></i></span>
                         </div>
                         <div class="skill-group">Backend</div>
-                        <div class="tags-wrap">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Nest.js</span>
-                            <span class="tag">Java</span>
-                            <span class="tag">Spring Boot</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">MongoDB</span>
+                        <div class="skill-icons">
+                            <span class="skill-icon" title="Node.js" aria-label="Node.js" role="img"><i class="devicon-nodejs-plain colored"></i></span>
+                            <span class="skill-icon" title="Nest.js" aria-label="Nest.js" role="img"><i class="devicon-nestjs-plain colored"></i></span>
+                            <span class="skill-icon" title="Java" aria-label="Java" role="img"><i class="devicon-java-plain colored"></i></span>
+                            <span class="skill-icon" title="Spring Boot" aria-label="Spring Boot" role="img"><i class="devicon-spring-plain colored"></i></span>
+                            <span class="skill-icon" title="PostgreSQL" aria-label="PostgreSQL" role="img"><i class="devicon-postgresql-plain colored"></i></span>
+                            <span class="skill-icon" title="MongoDB" aria-label="MongoDB" role="img"><i class="devicon-mongodb-plain colored"></i></span>
                         </div>
                         <div class="skill-group">Tools &amp; Practices</div>
-                        <div class="tags-wrap">
-                            <span class="tag">Git</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">CI/CD</span>
-                            <span class="tag">Postman</span>
-                            <span class="tag">Design Patterns</span>
-                            <span class="tag">System Architecture</span>
-                            <span class="tag">Agile / Scrum</span>
+                        <div class="skill-icons">
+                            <span class="skill-icon" title="Git" aria-label="Git" role="img"><i class="devicon-git-plain colored"></i></span>
+                            <span class="skill-icon" title="Docker" aria-label="Docker" role="img"><i class="devicon-docker-plain colored"></i></span>
+                            <span class="skill-icon" title="CI/CD" aria-label="CI/CD" role="img"><i class="devicon-githubactions-plain colored"></i></span>
+                            <span class="skill-icon" title="Postman" aria-label="Postman" role="img"><i class="devicon-postman-plain colored"></i></span>
+                            <span class="skill-icon" title="Agile / Scrum" aria-label="Agile / Scrum" role="img"><i class="devicon-jira-plain colored"></i></span>
                         </div>
                     </div>
 
@@ -179,7 +177,7 @@
                                 <div class="exp-line">
                                     <div class="exp-role">Senior Frontend Engineer</div>
                                     <div class="exp-org">ASTHA IT · Augmented at Banglalink Digital Communications Ltd.</div>
-                                    <div class="exp-year">2025 — Present</div>
+                                    <div class="exp-year">Apr 2025 — Present</div>
                                     <ul class="exp-bullets">
                                         <li>Working on Toffee Web, the cross-platform TV app (Tizen, WebOS, VidaaOS), the Admin panel, Contest CMS and Ad Dashboard.</li>
                                         <li>Introduced a structured design system and a customised Shadcn-based component library, documented in Storybook.</li>
@@ -195,7 +193,7 @@
                                 <div class="exp-line">
                                     <div class="exp-role">Frontend Engineer</div>
                                     <div class="exp-org">Reddot Digital Ltd. · Subsidiary of Robi Axiata Limited</div>
-                                    <div class="exp-year">2022 — 2025</div>
+                                    <div class="exp-year">Jan 2022 — Apr 2025</div>
                                     <ul class="exp-bullets">
                                         <li>Worked on RDMS, Salesforce Automation, SVS (SIM Registration), incentive calculation and the Robi/Airtel corporate website.</li>
                                         <li>Converted ~50% of a legacy class-component codebase to functional components with hooks, cutting bundle size by 30% and page load time by 40%.</li>
@@ -251,7 +249,7 @@
                                 <div class="edu-line">
                                     <div class="edu-degree">B.Sc. in Computer Science and Engineering</div>
                                     <div class="edu-school">Chittagong University of Engineering and Technology (CUET), Chattogram</div>
-                                    <div class="edu-year">2016 — 2021</div>
+                                    <div class="edu-year">Feb 2016 — Apr 2021</div>
                                 </div>
                             </div>
                             <div class="edu-item">
@@ -259,7 +257,7 @@
                                 <div class="edu-line">
                                     <div class="edu-degree">Higher Secondary Certificate (Science)</div>
                                     <div class="edu-school">Notre Dame College, Dhaka</div>
-                                    <div class="edu-year">2013 — 2015</div>
+                                    <div class="edu-year">Jul 2013 — Jun 2015</div>
                                 </div>
                             </div>
                         </div>
@@ -280,8 +278,8 @@
         <div class="footer-inner">
             <span class="footer-text">© 2026 Hafizul Haque</span>
             <div class="footer-social">
+                <a href="https://github.com/HafizulHaque" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/hafizul-haque" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:hafizul.cse.cuet@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>

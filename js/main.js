@@ -31,3 +31,32 @@ window.addEventListener('scroll', function () {
         document.body.classList.toggle('nav-stuck', stuck);
     }
 }, { passive: true });
+
+(function () {
+    var nav = document.querySelector('.site-nav');
+    var toggle = document.getElementById('nav-toggle');
+    var scrim = document.getElementById('nav-scrim');
+    var mobile = window.matchMedia('(max-width: 800px)');
+
+    function setOpen(open) {
+        nav.classList.toggle('nav-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        toggle.firstElementChild.className = 'fas fa-' + (open ? 'times' : 'bars');
+        scrim.hidden = !open;
+    }
+
+    toggle.addEventListener('click', function () {
+        setOpen(!nav.classList.contains('nav-open'));
+    });
+    scrim.addEventListener('click', function () { setOpen(false); });
+    document.getElementById('nav-links').addEventListener('click', function (e) {
+        if (e.target.closest('a')) setOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setOpen(false);
+    });
+    mobile.addEventListener('change', function (e) {
+        if (!e.matches) setOpen(false);
+    });
+})();
